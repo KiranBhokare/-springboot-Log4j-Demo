@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="trace">
+	<Properties>
+		<Property name="LOG_PATTERN">%d{yyyy-MM-dd} [%p] [%m] %n</Property>
+	</Properties>
+	<Appenders>
+		<Console name="ConsoleAppender" target="SYSTEM_OUT">
+			<PatternLayout pattern="${LOG_PATTERN}" />
+		</Console>
+	</Appenders>
+	<Loggers>
+		<Logger name="com.Log4j.demo" level="all" additivity="false">
+			<AppenderRef ref="ConsoleAppender" />
+		</Logger>
+		<Root level="all">
+			<AppenderRef ref="ConsoleAppender" />
+		</Root>
+	</Loggers>
+</Configuration>
